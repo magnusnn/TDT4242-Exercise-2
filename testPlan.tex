@@ -1,0 +1,506 @@
+\section{Test plan}
+This section will contain the test plans. 
+
+\section{Goal 1}
+
+The following requirements were picked from goal 1:
+
+\begin{enumerate}
+    \item When the ACC system is active the ACC system shall provide a time gap value in the range of 1.5 seconds to 2.2 seconds.
+    \item When the ACC system is active the ACC system shall measure the speed equal to the physical speed.
+    \item When the ACC system is active the ACC system shall select the modewith the lowest speed automatically.
+\end{enumerate}
+
+\noindent The test in table \ref{tab_case1} assumes it is possible to check the time gap value in some sort of computer interface. Since it shall be possible to have a selectable time gap value, there must be some sort of interface to set it. 
+ 
+\begin{table}[H]
+\centering
+\begin{tabularx}{\linewidth}{ X|X }
+  \hline
+  \textbf{Test ID} & 1.1 \\
+  \hline
+  \textbf{Test Name} & System provided time gap value \\
+  \hline
+  \textbf{Main goal} & When the ACC is active, vehicle speed shall be controlled automatically  to  maintain  a  time  gap  to  the  forward  vehicle  ormaintain a set speed. \\
+  \hline
+  \textbf{Goal} &  Verify that there is at least one time gap value provided by the ACC system in the range of 1.5 seconds to 2.2 seconds. \\
+  \hline
+  \textbf{Requirement(s)} &  When the ACC system is active the ACC system shall provide a time gap value in the range of 1.5 seconds to 2.2 seconds. \\
+  \hline
+  \textbf{Description} &  Test whether the system is able to provide at least one time gap value in the range of 1.5 seconds to 2.2 seconds. \\
+  \hline
+  \textbf{Stakeholders} &  Developers, testers, users\\
+  \hline
+  \textbf{Pre-conditions} &
+  \begin{enumerate}
+      \item The ACC system must be active.
+      \item The expected time gap value provided by the system is in the range of 1.5 seconds to 2.2 seconds. 
+      \item No other time gap value has been set by the tester and overriden the value provided by the ACC system.
+      \item The tester must be within reach of the ACC system interface. 
+  \end{enumerate} \\
+  \hline
+  \multicolumn{2}{c}{\textbf{Event Sequence}}\\
+  \hline
+  \textit{Input events} & \textit{Output events} \\
+  \hline
+   - & The ACC system displays the main menu \\
+  \hline
+  The tester/user navigates to the time gap value mode settings  & - \\
+  \hline
+   - &  The ACC system displays a selectable time gap value menu with a default value between the range of 1.5 seconds to 2.2 seconds \\
+  \hline
+  \end{tabularx}
+\caption{\label{tab_case1} Test case 1}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\linewidth}{X|X}
+  \hline
+  \textbf{Test ID} & 1.2 \\
+  \hline
+  \textbf{Test Name} & Measured speed equals physical speed \\
+  \hline
+  \textbf{Main goal} & When the ACC is active, vehicle speed shall be controlled automatically to maintain a time gap to the forward vehicle or maintain a set speed  \\
+  \hline
+  \textbf{Goal} & Measured speed equals physical speed \\
+  \hline
+  \textbf{Requirement(s)} & When the ACC system is active the ACC system shall measure the speed equal to the physical speed. \\
+  \hline
+  \textbf{Description} & This test will check whether the speed measured by the ACC system's sensors equals the physical speed of the vehicle. \\
+  \hline
+  \textbf{Stakeholders} & Developers, testers  \\
+  \hline
+  \textbf{Pre-conditions} &  
+  
+  \begin{enumerate}
+      \item The measurement sensors must be available and responding.
+      \item The ACC system must be active.
+      \item The vehicle must not be in motion.
+  \end{enumerate}
+  \\
+  \hline
+  \multicolumn{2}{c}{\textbf{Event Sequence}} \\
+  \hline
+  \textit{Input events} & \textit{Output events} \\
+  \hline
+   &  The measured speed and the actual speed of the standby vehicle equals 0 km/h.\\
+  \hline
+   The tester/user accelerates the vehicle to an actual speed of 30 km/h. &  \\
+  \hline
+   &  The measured speed equals the actual speed of 30 km/h. \\
+  \hline
+  \end{tabularx}
+\caption{\label{tab_case2} Test case 2}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\linewidth}{X|X}
+  \hline
+  \textbf{Test ID} & 1.3 \\
+  \hline
+  \textbf{Test Name} & Automatic selection of mode \\
+  \hline
+  \textbf{Main goal} & When the ACC is active, vehicle speed shall be controlled automatically to maintain a time gap to the forward vehicle or maintain a set speed  \\
+  \hline
+  \textbf{Goal} & The mode with the lowest mode is selected \\
+  \hline
+  \textbf{Requirement(s)} & When the ACC system is active the ACC system shall select the mode with the lowest speed automatically. \\
+  \hline
+  \textbf{Description} & The test case shall test whether the mode with the lowest speed is selected automatically.  \\
+  \hline
+  \textbf{Stakeholders} & Developers, testers \\
+  \hline
+  \textbf{Pre-conditions} & 
+  \begin{enumerate}
+      \item The ACC system must be active.
+      \item The subject vehicle must 
+  \end{enumerate}
+  \\
+  \hline
+  \multicolumn{2}{c}{\textbf{Event Sequence}} \\
+  \hline
+  \textit{Input events} & \textit{Output events} \\
+  \hline
+   &  \\
+  \hline
+   &  \\
+  \hline
+   &  \\
+  \hline
+   &  \\
+  \hline
+  \end{tabularx}
+\caption{\label{tab_case3} Test case 3}
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\linewidth}{X|X}
+  \hline
+  \textbf{Test ID} & \\
+  \hline
+  \textbf{Test Name} &  \\
+  \hline
+  \textbf{Main goal} &  \\
+  \hline
+  \textbf{Goal} &  \\
+  \hline
+  \textbf{Requirement(s)} &  \\
+  \hline
+  \textbf{Description} &  \\
+  \hline
+  \textbf{Stakeholders} &  \\
+  \hline
+  \textbf{Pre-conditions} &  \\
+  \hline
+  \multicolumn{2}{c}{\textbf{Event Sequence}} \\
+  \hline
+  \textit{Input events} & \textit{Output events} \\
+  \hline
+   &  \\
+  \hline
+   &  \\
+  \hline
+   &  \\
+  \hline
+   &  \\
+  \hline
+  \end{tabularx}
+\caption{\label{tab_caseX} Test case X}
+\end{table}
+
+
+
+\section{Goal 2}
+\begin{enumerate}
+    \item Off state can be forced automatically from either Stand-by or Active state by failure reaction.
+    \item Off state can be set manually from either Stand-by or Active state by a manual switch.
+    \item Stand-by state can be activated manually and/or automatically from self test, from off state.
+    \item Braking by the driver shall deactivate ACC function at least if the driver initiated brake force demand is higher than the ACC initiated brake force
+    
+    
+    %%KÅRE, VELG EN AV DISSE :)
+    \item Active state can be activated only from Stand-by state via user interaction.
+    \item Active state should switch between ACC speed control and ACC time gap control.
+\end{enumerate}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\linewidth}{X|X}
+  \hline
+  \textbf{Test ID} & 2.1\\
+  \hline
+  \textbf{Test Name} &  Force ACC-system to turn off when a fail i detected\\
+  \hline
+  \textbf{Main goal} &  The ACC-system is turned off\\
+  \hline
+  \textbf{Goal} & If the system recognize a failure with the ACC, the system shall automatically turn off the ACC either from Stand-by or Active state \\
+  \hline
+  \textbf{Requirement(s)} &  Off state can be forced automatically from either Stand-by or Active-state by failure reaction\\
+  \hline
+  \textbf{Description} &  The test will simulate an error that should be descovered due to failure recognition of the system. When an error is found, the system shall automatically switch the ACC to off state\\
+  \hline
+  \textbf{Stakeholders} & Developers, testes \\
+  \hline
+  \textbf{Pre-conditions} & 
+  \begin{enumerate}
+      \item The ACC must be in either Active state or Stand-by state
+      \item The system must not have any errors before the test is initialized
+  \end{enumerate}\\
+  \hline
+  \multicolumn{2}{c}{\textbf{Event Sequence}} \\
+  \hline
+  \textit{Input events} & \textit{Output events} \\
+  \hline
+   &  \\
+  \hline
+   &  \\
+  \hline
+   &  \\
+  \hline
+   &  \\
+  \hline
+  \end{tabularx}
+\caption{\label{tab_caseX} Test case X}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\linewidth}{X|X}
+  \hline
+  \textbf{Test ID} & 2.2\\
+  \hline
+  \textbf{Test Name} & Turn off the ACC system by a manual switch\\
+  \hline
+  \textbf{Main goal} & The ACC system is turned off \\
+  \hline
+  \textbf{Goal} & The goal of the test is to be able to turn off the ACC system with human interaction by interacting with a manual switch \\
+  \hline
+  \textbf{Requirement(s)} & Off state can be set manually from either Stand-by or Active state by a manual switch. \\
+  \hline
+  \textbf{Description} & It should be a posibility for the end-user to turn off the ACC-system by a manual switch. The interaction should be possbile to do either when the ACC is in Active state or Stand-by state \\
+  \hline
+  \textbf{Stakeholders} & Developers, testes, end-users \\
+  \hline
+  \textbf{Pre-conditions} & 
+  \begin{enumerate}
+      \item The ACC must be either in Active state or in Stand-by state
+      \item There must be a manual switch provided to the user
+      \item The system must not have any possibility to be turned off due to a failure reaction
+  \end{enumerate}\\
+  \hline
+  \multicolumn{2}{c}{\textbf{Event Sequence}} \\
+  \hline
+  \textit{Input events} & \textit{Output events} \\
+  \hline
+   &  \\
+  \hline
+   &  \\
+  \hline
+   &  \\
+  \hline
+   &  \\
+  \hline
+  \end{tabularx}
+\caption{\label{tab_caseX} Test case X}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\linewidth}{X|X}
+  \hline
+  \textbf{Test ID} & 3.3\\
+  \hline
+  \textbf{Test Name} & Set ACC-system to Stand-by state when selftest is passed \\
+  \hline
+  \textbf{Main goal} & The ACC-system is set to stand-by state \\
+  \hline
+  \textbf{Goal} & If the system passes the selftest, the ACC-system shall be able to be set into stand-by state from the off state. \\
+  \hline
+  \textbf{Requirement(s)} &  Stand-by state can be activated manually and/or automatically from selftest, from off state \\
+  \hline
+  \textbf{Description} & s \\
+  \hline
+  \textbf{Stakeholders} & Developers, testers \\
+  \hline
+  \textbf{Pre-conditions} &  \\
+  \hline
+  \multicolumn{2}{c}{\textbf{Event Sequence}} \\
+  \hline
+  \textit{Input events} & \textit{Output events} \\
+  \hline
+   &  \\
+  \hline
+   &  \\
+  \hline
+   &  \\
+  \hline
+   &  \\
+  \hline
+  \end{tabularx}
+\caption{\label{tab_caseX} Test case X}
+\end{table}
+
+
+
+\section{Goal 3}
+The following requirements were picked:
+
+\begin{enumerate}
+    \item ACC shall either be suspended or transition to stand-by after use of clutch
+    \item Driver must be informed clearly about potential conflict between brake and engine idle control
+    \item Brake control can be continued during use of clutch
+    \item The ACC system can apply the brakes automatically
+    \item -----
+\end{enumerate}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\linewidth}{X|X}
+  \hline
+  \textbf{Test ID} & 3.1\\
+  \hline
+  \textbf{Test Name} &  Suspend or stand-by ACC\\
+  \hline
+  \textbf{Main goal} & Maintain [Functional types] \\
+  \hline
+  \textbf{Goal} & Achieve [Type 1a: Manual clutch operation] \\
+  \hline
+  \textbf{Requirement(s)} &  ACC shall either be suspended or transition to stand-by after use of clutch\\
+  \hline
+  \textbf{Description} &  Test if the ACC system get suspended or enter stand-by mode after the clutch has been used\\
+  \hline
+  \textbf{Stakeholders} &  Developers, testers\\
+  \hline
+  \textbf{Pre-conditions} &  
+  \begin{enumerate}
+      \item Car has manual clutch operation
+      \item ACC system is active
+  \end{enumerate}\\
+  \hline
+  \multicolumn{2}{c}{\textbf{Event Sequence}} \\
+  \hline
+  \textit{Input events} & \textit{Output events} \\
+  \hline
+   Clutch force & - \\
+  \hline
+   - & The ACC system becomes suspended or enter stand-by mode \\
+  \hline
+  \end{tabularx}
+\caption{\label{tab_caseX} Test case 3.1}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\linewidth}{X|X}
+  \hline
+  \textbf{Test ID} & 3.2\\
+  \hline
+  \textbf{Test Name} &  Brake and engine control conflict\\
+  \hline
+  \textbf{Main goal} &  Maintain [Functional types]\\
+  \hline
+  \textbf{Goal} & Achieve [Type 2a: Manual clutch operation, active brake control] \\
+  \hline
+  \textbf{Requirement(s)} &  Driver must be informed clearly about potential conflict between brake and engine idle control\\
+  \hline
+  \textbf{Description} &  Test if the driver is informed, clearly and early, about a potential conflict between brake and engine idle control\\
+  \hline
+  \textbf{Stakeholders} &  Developers, end-users\\
+  \hline
+  \textbf{Pre-conditions} &  
+  \begin{enumerate}
+      \item Car has manual clutch operation
+      \item Car has active brake control
+      \item Speed of car is greater than 0 km/h
+  \end{enumerate}\\
+  \hline
+  \multicolumn{2}{c}{\textbf{Event Sequence}} \\
+  \hline
+  \textit{Input events} & \textit{Output events} \\
+  \hline
+   Brake force & - \\
+  \hline
+   - & Driver receives notification about brake and engine conflict \\
+  \hline
+  \end{tabularx}
+\caption{\label{tab_caseX} Test case 3.2}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\linewidth}{X|X}
+  \hline
+  \textbf{Test ID} & 3.3\\
+  \hline
+  \textbf{Test Name} &  Brake during clutch use\\
+  \hline
+  \textbf{Main goal} &  Maintain [Functional types]\\
+  \hline
+  \textbf{Goal} & Achieve [Type 2a: Manual clutch operation, active brake control] \\
+  \hline
+  \textbf{Requirement(s)} &  Brake control can be continued during use of clutch\\
+  \hline
+  \textbf{Description} &  Test if brakes can be used continuously during clutch usage\\
+  \hline
+  \textbf{Stakeholders} &  Developers, testers\\
+  \hline
+  \textbf{Pre-conditions} &  
+  \begin{enumerate}
+      \item Car has manual clutch operation
+      \item Car has active brake control
+  \end{enumerate}\\
+  \hline
+  \multicolumn{2}{c}{\textbf{Event Sequence}} \\
+  \hline
+  \textit{Input events} & \textit{Output events} \\
+  \hline
+   Clutch force & - \\
+  \hline
+   Brake force & - \\
+  \hline
+  - & - \\
+  \hline
+  \end{tabularx}
+\caption{\label{tab_caseX} Test case 3.3}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\linewidth}{X|X}
+  \hline
+  \textbf{Test ID} & 3.4\\
+  \hline
+  \textbf{Test Name} &  Apply brakes automatically\\
+  \hline
+  \textbf{Main goal} &  Maintain [Functional types]\\
+  \hline
+  \textbf{Goal} & Achieve [Type 2b: active brake control] \\
+  \hline
+  \textbf{Requirement(s)} &  The ACC system can apply the brakes automatically\\
+  \hline
+  \textbf{Description} &  Test if the brakes are applied automatically in the ACC system\\
+  \hline
+  \textbf{Stakeholders} &  Developers, testers\\
+  \hline
+  \textbf{Pre-conditions} &  
+  \begin{enumerate}
+      \item Car has active brake control
+      \item ACC system is active
+      \item Speed of car is greater than 0 km/h
+  \end{enumerate}\\
+  \hline
+  \multicolumn{2}{c}{\textbf{Event Sequence}} \\
+  \hline
+  \textit{Input events} & \textit{Output events} \\
+  \hline
+   Speed of car overrides max limit & - \\
+  \hline
+   - & Brake force \\
+  \hline
+  \end{tabularx}
+\caption{\label{tab_caseX} Test case 3.4}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\linewidth}{X|X}
+  \hline
+  \textbf{Test ID} & 3.5\\
+  \hline
+  \textbf{Test Name} &  \\
+  \hline
+  \textbf{Main goal} &  \\
+  \hline
+  \textbf{Goal} &  \\
+  \hline
+  \textbf{Requirement(s)} &  \\
+  \hline
+  \textbf{Description} &  \\
+  \hline
+  \textbf{Stakeholders} &  \\
+  \hline
+  \textbf{Pre-conditions} & 
+  \begin{enumerate}
+      \item
+      \item
+  \end{enumerate} \\
+  \hline
+  \multicolumn{2}{c}{\textbf{Event Sequence}} \\
+  \hline
+  \textit{Input events} & \textit{Output events} \\
+  \hline
+   - & - \\
+  \hline
+   - & - \\
+  \hline
+  \end{tabularx}
+\caption{\label{tab_caseX} Test case 3.5}
+\end{table}

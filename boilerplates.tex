@@ -1,0 +1,138 @@
+
+\section{Test}
+
+
+\subsection{Goal 1}
+
+\subsubsection{Requirements} \label{goal_1_requirements}
+\begin{enumerate}
+    \item When the ACC system is active the ACC system shall have a selectable minimum time gap value for all speeds.
+    \item When the ACC system is active the ACC system shall provide a time gap value in the range of 1.5 seconds to 2.2 seconds.
+    \item When the ACC system is active and following a forward vehicle the ACC system shall align to the minimum time gap limit.
+    \item When the ACC system is active, following a forward vehicle, and the time gap value temporarily falls below the limit the ACC system shall adjust the time gap to achieve the limit within an appropriate time.
+    \item When the ACC system is active and maintaining a set speed the ACC system shall align the subject vehicle speed to the set speed.
+    \item When the ACC system is active the ACC system shall select the mode with the lowest speed automatically.
+    \item When the ACC system is active the ACC system shall measure the speed equal to the physical speed. 
+    \item When the ACC system is active the ACC system shall select the forward vehicle in the subject’s lane.
+    \item When he ACC system is active the ACC system shall measure the range equal to the physical range.
+    \item When the ACC system is active and a forward vehicle is present within range A the ACC system shall measure the range.
+    \item When the ACC system is active the ACC system shall detect the presence of a vehicle within range B.
+    \item When the ACC system is active and a vehicle is detected within range B the ACC system shall increase clearance and/or inhibit automatic acceleration.
+    \item When the ACC syystem is active it shall follow vehicles along curves and straight roads.
+\end{enumerate}
+
+\subsubsection{Testability}
+
+The numbers reflect the goals in section \ref{goal_1_requirements}
+
+\begin{enumerate}
+    \item You can either execute a test, or run an experiment if you want to involve the user. The word minimum does not have any inherit restrictions and could be interpreted differently. Testing can also go on forever since minimum can always be set to one time unit higher. All speeds can also be interpreted differently. Requirement formulated with an active voice. Does not require other systems to be tested. You can observe whether the time gap value was set. Possible to retest and restart test.  
+    \item You can execute a test to check the system for these values. The requirement is worded in a precise way. The time gap value has a clear range and can be tested. Requirement formulated with an active voice. Does not require other systems to be tested. You can observe whether the system has a time gap value. Possible to retest and restart test. 
+    \item You can either execute a test or run an experiment. The minimum time gap limit must be defined before testing.  Requirement formulated with an active voice. Does not require other systems to be tested, the forward vehicle can be mimicked through sensor signals. You can observe whether the system aligns to the limit. Possible to retest and restart test.
+    \item You can either execute a test or run an experiment. The word appropriate is unclear and is open to interpretation. Time gap limit must also be defined before testing. Does not require other systems to be tested, the forward vehicle can be mimicked through sensor signals. You can observer whether the system adjust when the time gap falls below the limit. Possible to retest and restart test.
+    \item You can either execute a test or run an experiment. The requirement is clear and concise. Requirement formulated with an active voice. Does not require other systems to be tested, the set speed and the measured speed can be mimicked through a computer. You can observe whether the system aligns the speed to the set speed. Possible to retest and restart test.
+    \item You can either execute a test or run an experiment. The requirement is clear and concise. Requirement formulated with an active voice. Does not require other systems to be tested, the different speeds can be mimicked through a computer. You can observe whether the system picks the mode with the lowest speed. Possible to retest and restart test.
+    \item You can either execute a test or run an experiment. Requirement formulated with an active voice. The requirement does not defined how the speed shall be measured. Does not require other systems to be tested, the set speed and the measured speed can be mimicked through a computer. You can observe whether the system's measured speed is equal to the physical speed. Possible to retest and restart test.
+    \item You can either execute a test or run an experiment. The requirement is clear and concise. Does not require other systems to be tested, the forward vehicle can be mimicked through sensor input. You can observe whether the system selects the correct vehicle or not. Possible to retest and restart test. 
+    \item You can either execute a test or run an experiment. Requirement formulated with an active voice. The requirement does not defined how the distance shall be measured. Does not require other systems to be tested, the set distance and the measured distance can be mimicked through a computer. You can observe whether the system's measured distance is equal to the physical distance. Possible to retest and restart test.
+    \item You can either execute a test or run an experiment. The requirement is clear and concise, but range A needs to be defined. Requirement is formulated with an active voice. The requirement does not define how range shall be measured. Does not require other systems to be tested, the set distance can be mimicked through a computer. Possible to retest and restart test. 
+    \item You can either execute a test or run an experiment. Requirement is formulated with an active voice. The requirement does not define how the distance of range B shall be measured. Does not require other systems to be tested, sensory input can be mimicked through a computer. You can observe whether or not the vehicle is detected within range B. Possible to retest and restart test.
+    \item You can either execute a test or run an experiment. The requirement does not specify the distance range B, how much and to what degree clearance shall be adjusted, and how the automatic acceleration is inhibited. Does not require other systems to be tested, sensory input can be mimicked through a computer. You can observe whether or not the clearance is adjusted and if the automatic acceleration is inhibited. 
+    \item You can either execute a test or run an experiment. The requirement does not specify "follow", nor the upper and lower bounds of the curve. Does not require other systems to be tested, the forward vehicle and curve can be mimicked through sensor signals. You can observe whether the system follows the vehicle through curves and straight roads. 
+\end{enumerate}
+
+\newpage
+\subsection{Goal 2}
+
+\subsubsection{Requirements}
+\label{goal_2_requirements}
+
+\paragraph{ACC active-state}
+\begin{enumerate}
+    \item When the ACC is active, the vehicle speed shall be controlled automatically either to maintain a time gap to a forward vehicle, or to maintain the set speed
+    \item When brake force higher than initiated is applied the ACC shall be deactivated
+    \item When the ACC is active the driver shall be informed with the set speed information
+\end{enumerate}
+
+\paragraph{ACC off-state}
+\begin{enumerate}
+    \item When the ACC system shuts down the driver shall be informed
+    \item When the ACC system is not available the driver shall be informed
+\end{enumerate}
+
+\paragraph{ACC stand-by}
+\begin{enumerate}
+    \item When the ACC is active the driver shall be able to deactivate the system with a touch on the clutch pedal
+    \item When the ACC is in stand-by the system shall preform a self-test and shut down if not completed
+\end{enumerate}
+
+\subsubsection{Testability}
+The numers reflect the goals in section \ref{goal_2_requirements}
+\begin{enumerate}
+    \item This can be tested either by a user driving or a simulated test. The goal is to test if the the vehicle speed is controlled either automatically by maintaining a time gap to a forward veichle, or to maintain the set speed. So this is a to-part test where you cant test both requirements at once. Does require to test two systems, time gap and maintaining the set speed. The vehicle shall maintain a set time gap to the forward vehicle. On the other test the vehicle shall accelerate or decelerate if the vehicle speed is either lower or higher than the set speed. Possible to retest and restart test.
+    \item The system shall deactivate the ACC if active whenever the brake force applied by the user is higher than initiated. This test can be performed by a driver and to see if the ACC is deactivated when the brakes is used. One can also simulate this test saying that a given brake force is applied. What this brake force is set to have to be calibrated before the test. Possible to retest and restart test.
+    \item By activating the ACC, a symbol or some other indication shall be displayed to the user. This can be tested simply by either running a test or an experiment. The requirement is clear and concise. Does not require other systems to be tested and should be done fairly simple. Possible to retest and restart test.
+    \item When the ACC system shuts down the user shall be notified. This can be done by causing a self test to fail and shut down the system through an experiment. The requirement is clear and concise. Does require that other systems is tested and functional with a simulated error in the self test. One can observe if the ACC is deactivated and that a notification is forwarded to the driver. Possible to retest and restart test.
+    \item By disabling the ACC a notification shall be displayed to the user. This requirement is somewhat wage and a definition of what informed means shall be specified. This test can be done by having the ACC deactivated an that an icon in the driver console to be activated if the ACC is unable. The test does not require other system to be tested and should be a fairly straight forward test to complete. Possible to retest and restart test.
+    \item You can either execute a test or run an experiment. The requirement is clear and concise. Does require that the clutch system is working correctly. The force of the clutch pedal can either be simulated or with a physical test.One can observe whether the system is deactivated or not. It is possible to retest and restart test.
+    \item By simulating a self test of the system one can observe if the system shuts down if the self test fails. This can either be done with a test or as an experiment. The requirement does not specify what type of error on the self test to be failing. Does require the self test of the vehicle to be tested and working, and this can be mimicked through a computer. One can observe if ACC is deactivated with an incomplete test. Possible to retest and restart test.
+\end{enumerate}
+
+
+\subsection{Goal 3}
+
+\subsubsection{Requirements}
+\paragraph{Brake lights}
+\begin{enumerate}
+    \item{When brakes are applied the brake lights shall illuminate in less than 100 ms}
+    \item{When brake lights are activated the brake lights shall not be flickering}
+\end{enumerate}
+
+\paragraph{Subsystem failure}
+\begin{enumerate}
+    \item{When the ACC controller fails the ACC control mode shall be relinquished}
+    \item{When the range sensor fails the engine control mode shall be relinquished}
+    \item{When the range sensor fails in type 1 systems the current strategy shall be maintained}
+    \item{When the range sensor fails and driver intervenes the ACC system shall be disabled}
+    \item{When the engine fails in type 2 systems the current braking maneuver shall be maintained}
+    \item{When the engine fails the engine control mode shall be relinquished}
+    \item{When the brake system fails in type 2 systems the ACC control mode shall be relinquished}
+    \item{When the brake system fails in type 2 systems the engine control mode shall be relinquished}
+    \item{When the gearbox fails in type 1 systems the ACC control mode shall be relinquished}
+    \item{When the gearbox fails in type 1 systems the engine control mode shall be relinquished}
+\end{enumerate}
+
+\paragraph{Type 2a systems}
+\begin{enumerate}
+    \item{When brakeforce exceeds engine idle control the driver shall be notified}
+\end{enumerate}
+
+\paragraph{Type 2b: Active brake control}
+\begin{enumerate}
+    \item{When power demand is greater than the ACC the brake sensor shall be disengaged}
+    \item{When braking is needed the brake sensor shall be maintained}
+    \item{When braking is enabled the light sensor shall illuminate}
+\end{enumerate}
+
+\subsubsection{Testability}
+\begin{enumerate}
+    \item{You can execute a test to check the system for the given value. The requirement is worded in a precise way. Requirement formulated with an active voice. The illumination of the lights has a clear range and can be tested. It requires the brake sensor and light sensor to be able to perform the test. You can observe and measure if the lights illuminate by the set time. Possible to retest and restart test}
+    \item{You can either execute a test or run an experiment. It is possible to involve the user in the test. Requirement formulated with an active voice. The test or experiment requires the brake sensor and light sensor. You can observe whether lights are flickering or not. Possible to retest and restart test}
+    
+    \item{You can execute a test or run an experiment. The requirement is clear and concise and formulated with an active voice. Does not require other systems to be tested, the ACC controller failure can be simulated. You can observe if the system relinquishes. Possible to retest and restart test.}
+    \item{You can execute a test or run an experiment. The requirement is clear and concise and formulated with an active voice. Does not require other systems to be tested, the range sensor failure can be simulated. You can observe if the system relinquishes. Possible to retest and restart test.}
+    \item{You can execute a test or run an experiment. The requirement is clear and concise and formulated with an active voice. Does not require other systems to be tested, the range sensor can be simulated. You can observe if the current strategy is maintained. Possible to retest and restart test.}
+    \item{You can execute a test or run an experiment. The requirement is clear and concise and formulated with an active voice. Does not require other systems to be tested, the range sensor failure can be simulated, and the user is needed to intervene the system. You can observe if the system disables after failure and driver intervenes. Possible to retest and restart test.}
+    \item{You can execute a test or run an experiment. The requirement is clear and concise and formulated with an active voice. Does not require other systems to be tested, the engine failure can be simulated. You can observe if the system maintains current braking maneuver. Possible to retest and restart test.}
+    \item{You can execute a test or run an experiment. The requirement is clear and concise and formulated with an active voice. Does not require other systems to be tested, the engine control failure can be simulated. You can observe if the system relinquishes. Possible to retest and restart test.}
+    \item{You can execute a test or run an experiment. The requirement is clear and concise and formulated with an active voice. Does not require other systems to be tested, the brake system failure can be simulated. You can observe if the system relinquishes. Possible to retest and restart test.}
+    \item{You can execute a test or run an experiment. The requirement is clear and concise and formulated with an active voice. Does not require other systems to be tested, the brake system failure can be simulated. You can observe if the system relinquishes. Possible to retest and restart test.}
+    \item{You can execute a test or run an experiment. The requirement is clear and concise and formulated with an active voice. Does not require other systems to be tested, the gearbox failure can be simulated. You can observe if the system relinquishes. Possible to retest and restart test.}
+    \item{You can execute a test or run an experiment. The requirement is clear and concise and formulated with an active voice. Does not require other systems to be tested, the gearbox failure can be simulated. You can observe if the system relinquishes. Possible to retest and restart test.}
+
+    \item{You can either execute a test or run an experiment. An experiment would probably be better to see if the driver get notified. Requirement formulated with an active voice. Does not need other systems to be tested. You can observe that a notification is displayed, or if running an experiment observe that the user is notified. Possible to retest and restart test.}
+
+    \item{You can either execute a test or run an experiment. The requirement is clear and concise and formulated with an active voice. Does not require other systems to be tested, the power needed can be mimicked through a computer. You can observe if brakes disengage. Possible to retest and restart test.}
+    \item{You can either execute a test or run an experiment. How much speed that is needed before brakes should be maintained is unclear. Does not require other systems to be tested, speed needed for braking can be mimicked through a computer. You can observe if the system maintain brakes. Possible to retest and restart test.}
+    \item{You can either execute a test or run an experiment. The requirement is clear and concise and formulated with an active voice. The test requires the brake sensor and light sensor. You can easily observe if the lights illuminate when braking.}
+\end{enumerate}
