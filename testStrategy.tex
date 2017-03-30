@@ -1,22 +1,30 @@
 \section{Test strategy}
 
-Explain what a test strategy is here. 
+
+A test strategy is fundamental to ensure that vital stakeholders reach a consensus on test goals and objectives with regards to the implementation and verification of a system. A good test strategy is vital to ensure that a given project is delivered on time and according the specifications. The test strategy outlines who does what, and give objective measures to validate whether or not sub-parts of a system is performing according to pre-defined objectives. By involving all stakeholders early in the process, a good test strategy can be devised, using stakeholders feedback as input as well as business requirements and goals. Both stakeholders and test levels will be further described below.
 
 \subsection{Stakeholders}
 
 This section will describe the stakeholders.
 
 \begin{enumerate}
-    \item Developers develop the system and are focused on making sure that the system lives up to the requirements and needs of the customers. 
-    \item Customers 
-    \item Users
-    \item Testers are tasked with testing the system, ensuring that the system performs as expected. Testing is done according to a given methodology. 
-    \item Management ensure that the project comes along according to plan, and that developers and testers work in harmony to ensure that the underlying goals are met
+    \item \textbf{Developers} develop the system and are focused on making sure that the system lives up to the requirements and needs of the customers. 
+    \item \textbf{Customers} are the owners of the ACC system. Wants the system to operate according the specifications, be of low cost and delivered in a timely manner. 
+    \item \textbf{Users} will use the system on a day-by-day basis, and wants the system to be safe, bug-free, easy to use and operate according the individual needs.
+    \item \textbf{Testers} are tasked with testing the system, ensuring that the system performs as expected. Testing is done according to a given methodology. 
+    \item \textbf{Management} ensure that the project comes along according to plan, and that developers and testers work in harmony to ensure that the underlying goals are met and customer's satisfaction is guaranteed. 
 \end{enumerate}
 
 
 
 
 
-
 \subsection{Test levels}
+
+This section outlines the different test levels, stakeholder involvement as well as the chosen testing methodology were applicable.
+\begin{enumerate}
+    \item \textbf{Security:} This level focuses on the security of the system. The system needs to be safe to use, and should help the driver avoid accidents. The security test level is the most important one, and includes customers and testers as stakeholders. The chosen testing methodology is black-box testing. 
+    \item \textbf{Signal:} Focuses on testing the signal level of the system. This includes signal passing, both receive and transmit, between different components in the system. Testing of the signal level is vital to ensure that the security of the system is as high as possible, as the system as a whole relies heavily on signal data from the outside world. Stakeholders for the signal testing is mainly testers. Tests are run using grey box for the components and white boxing for the rest.
+    \item \textbf{Hardware:} Hardware level focuses on validating that the hardware performs as excepted. Testing will be done on a component level, primarily via black-box testing where output is validated by taking known input and expected output into account. Stakeholders for this level is developers and testers.
+    \item \textbf{Logical:} The logical level encompasses the logical functionality/aspects of the system. Testing is done primarily through unit tests, but also white-box testing. Stakeholders include developers and testers.
+\end{enumerate}
